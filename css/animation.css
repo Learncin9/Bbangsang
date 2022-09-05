@@ -1,0 +1,136 @@
+@keyframes top-fade-in-ani {
+    from {
+        transform: translateY(-400px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.top-fade-in {
+    animation: top-fade-in-ani 1s;
+}
+
+@keyframes left-fade-in-ani {
+    from {
+        transform: translateX(-400px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.left-fade-in {
+    animation: left-fade-in-ani 0.5s;
+}
+
+@keyframes right-fade-in-ani {
+    from {
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.right-fade-in {
+    animation: right-fade-in-ani 1.5s;
+}
+
+@keyframes slow-left-fade-in-ani {
+    from {
+        transform: translateX(-1000px);
+        opacity: 0.1;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1.0;
+    }
+}
+
+.slow-left-fade-in {
+    animation: slow-left-fade-in-ani 2s;
+}
+
+@keyframes slow-right-fade-in-ani {
+    from {
+        transform: translateX(1000px);
+        opacity: 0.1;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1.0;
+    }
+}
+
+.slow-right-fade-in {
+    animation: slow-right-fade-in-ani 2s;
+}
+
+@keyframes default-fade-in-ani {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.default-fade-in {
+    animation: default-fade-in-ani 0.7s;
+}
+/*================Title h2 animation ===============*/
+.txt-welcome {
+    animation: slow-right-fade-in-ani 0.7s ease-out;
+}
+
+.txt-to {
+    animation: slow-left-fade-in-ani 1.4s ease-out;
+}
+
+@keyframes txt-bbangsang-ani {
+    from {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1.0;
+    }
+}
+.txt-bbangsang {
+    animation: txt-bbangsang-ani 2.1s ease-out;
+}
+/*==================================================*/
+
+/*==================server stable chart animation=====================*/
+@keyframes server-stable-chart-ani {
+    from {
+        height: 10px;
+    }
+
+    to {
+        height: calc(30vh + 60px);
+    }
+}
+
+.server-stable-chart {
+    animation: server-stable-chart-ani 0.5s ease-out forwards;
+}
+
+@keyframes panel-element-ani {
+    from {
+        display: block;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.panel-element {
+    animation: panel-element-ani 0.5s ease-out forwards
+}
+
+/*===========================================================*

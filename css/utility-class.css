@@ -1,0 +1,28 @@
+.blur {
+    filter: blur(5px);
+}
+
+.left-out {
+    transform: translateX(-1800px);
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Silkscreen&display=swap');
+.title-txt {
+    font-family: 'Silkscreen', sans-serif;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}

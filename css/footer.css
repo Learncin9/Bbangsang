@@ -1,0 +1,27 @@
+footer {
+    background-color: rgb(228, 228, 228);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    display: block;
+    text-align: center;
+}
+
+footer p {
+    margin-left: 20px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+}
+
+table th {
+    text-align: left;
+}
+
+a {
+    color: #609beb;
+}

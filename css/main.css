@@ -1,0 +1,129 @@
+main {
+    background-image: url("./../img/main-backkgorund-image.png");
+    background-repeat: repeat-y;
+    background-size: 100vw;
+}
+
+.intro div {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(whitesmoke, 50%, transparent);
+
+    text-align: center;
+    user-select: none;
+
+    margin: auto;
+}
+
+.intro div h2 {
+    position: relative;
+    top: 20%;
+    transform: translateY(-50%);
+
+    font-size: xxx-large;
+}
+
+
+.mc-server-intro div{
+    display: block;
+
+    background-image: linear-gradient(whitesmoke, 50%, transparent),
+    url("https://mblogthumb-phinf.pstatic.net/MjAyMDAzMjJfMiAg/MDAxNTg0ODQ5MTA2MDc1.Vh13BKJEWcq8_hhdxmuuWU6ObY2siayOrtX9-w_y-7wg.qQBSrfG1ascEnDZhPssNMxCVrT7s_VpVYASS1IagodQg.PNG.louis0826/%EB%A7%88%EC%9D%B8%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8.png?type=w800");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100%;
+}
+
+.mc-server-intro div h2 {
+    display: inline-block;
+
+    word-wrap: break-word;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mc-server-intro div p {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    font-size: x-large;
+}
+
+.mc-server-intro div div {
+    height: 50px;
+    width: 60%;
+
+    margin: auto;
+
+    background-image: none;
+    background-color: whitesmoke;
+
+    border-radius: 13px;
+    border: 10px #ececec solid;
+}
+
+.mc-server-intro div div h3 {
+    font-weight: bold;
+    font-size: x-large;
+
+    margin-left: 30px;
+
+    border: none; 
+}
+
+#stable-rate {
+    height: 5vh;
+    width: 85%;
+    margin: auto;
+
+    background-color: #45b147;
+
+    border: none;
+
+    text-align: center;
+    vertical-align: text-bottom;
+    font-weight: bold;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: x-large;
+}
+
+#update-time {
+    height: 5vh;
+    width: 85%;
+    margin: auto;
+
+    background-color: greenyellow;
+
+    border: none;
+
+    text-align: center;
+    vertical-align: text-bottom;
+    font-weight: bold;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: x-large;
+
+@media screen and (max-width: 1300px) {
+    .mc-server-intro div h2 {
+        font-size: 5vh;
+        font-weight: bold;
+    }
+
+    .mc-server-intro div p {
+        width: 80%;
+        font-weight: bold;
+    }
+
+    .mc-server-intro div div h3 {
+        text-align: center;
+    }
+}
