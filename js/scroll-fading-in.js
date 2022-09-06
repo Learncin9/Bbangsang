@@ -1,4 +1,4 @@
-const DEVITATION = 400;
+const DEVITATION = 0;
 
 const MOBILE_SCREEN_WIDTH = 700;
 const IS_MOBILE_SCREEN = (screen.width <= MOBILE_SCREEN_WIDTH);
@@ -49,14 +49,28 @@ const targets = [
 
 
 //==========================================================
-let cur_page_y;
+let cur_page_y = 0;
+let init_page_y = -1;
 let element_y;
+let aa;
 
-function scroll_response_render(cur_page_y) {
+function scroll_response_render(pageY) {
+    aa = pageY;
+
+    if (init_page_y === -1) {
+        cur_page_y = 0;
+        init_page_y = pageY;
+    } else {
+        cur_page_y = pageY - init_page_y;
+    }
+
     for (let i=0; i<targets.length; i++) {
         element_y = (window.pageYOffset + targets[i].element.getBoundingClientRect().top - targets[i].element.clientHeight);
 
         if (cur_page_y - DEVITATION >= element_y) {
+
+            console.log(`page Y : ${cur_page_y} / elementY : ${element_y}`);
+
             if (targets[i][REMOVAL] !== NON_REMOVAL) {
                 targets[i].element.classList.replace(targets[i].removal, targets[i].addition);
             } else {
@@ -73,6 +87,12 @@ function scroll_response_render(cur_page_y) {
     }
 }
 
+document.addEventListener('scroll', (e) => {
+    scroll_response_render(e.pageY);
+});
+
 document.addEventListener('wheel', (e) => {
     scroll_response_render(e.pageY);
 });
+
+//to do : convert [scroll event] to [Intersection Observer]
