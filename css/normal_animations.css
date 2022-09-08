@@ -1,0 +1,13 @@
+@keyframes default-fade-in-ani {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.default-fade-in {
+    animation: default-fade-in-ani 0.7s forwards;
+}
