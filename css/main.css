@@ -111,6 +111,7 @@ main {
     font-weight: bold;
     font-family: 'Silkscreen', sans-serif;
     font-size: x-large;
+}
 
 @media screen and (max-width: 1300px) {
     .mc-server-intro div h2 {

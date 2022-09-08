@@ -78,7 +78,7 @@
 }
 
 .default-fade-in {
-    animation: default-fade-in-ani 0.7s;
+    animation: default-fade-in-ani 0.7s forwards;
 }
 /*================Title h2 animation ===============*/
 .txt-welcome {
@@ -130,7 +130,7 @@
 }
 
 .panel-element {
-    animation: panel-element-ani 0.5s ease-out forwards
+    animation: panel-element-ani 0.5s ease-out forwards;
 }
 
 /*===========================================================*
