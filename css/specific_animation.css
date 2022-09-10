@@ -37,20 +37,6 @@
     animation: right-fade-in-ani 0.4s;
 }
 
-@keyframes slow-left-fade-in-ani {
-    from {
-        transform: translateX(-1000px);
-        opacity: 0.1;
-    }
-    to {
-        transform: translateX(0px);
-        opacity: 1.0;
-    }
-}
-
-.slow-left-fade-in {
-    animation: slow-left-fade-in-ani 0.5s;
-}
 
 @keyframes slow-right-fade-in-ani {
     from {
@@ -66,30 +52,6 @@
 .slow-right-fade-in {
     animation: slow-right-fade-in-ani 0.5s;
 }
-
-/*================Title h2 animation ===============*/
-.txt-welcome {
-    animation: slow-right-fade-in-ani 0.5s ease-out;
-}
-
-.txt-to {
-    animation: slow-left-fade-in-ani 0.5s ease-out;
-}
-
-@keyframes txt-bbangsang-ani {
-    from {
-        transform: translateY(300px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1.0;
-    }
-}
-.txt-bbangsang {
-    animation: txt-bbangsang-ani 0.5s ease-out;
-}
-/*==================================================*/
 
 /*==================server stable chart animation=====================*/
 @keyframes server-stable-chart-ani {

@@ -29,7 +29,7 @@
             <span class="menu-bar"></span>
         </span>
         
-        <h1 class="top-fade-in title-txt"><custom-title/></h1>
+        <h1 class="top-fade-in"><custom-title/></h1>
 
         <div class="authentication right-fade-in">
             <input classs="signin" type="button" value="회원가입"/>
@@ -40,9 +40,9 @@
     <main>
         <section class="intro">
             <div>
-                <h2 class="txt-welcome">Welcome</h2>
-                <h2 class="txt-to">To</h2>
-                <h2 class="txt-bbangsang title-txt"><custom-title/></h2>
+                <h2 >Welcome</h2>
+                <h2 >To</h2>
+                <h2 class="txt-bbangsang"><!--This text is build by txt-bbangsang-intro.js--></h2>
             </div>
         </section>
 
@@ -95,9 +95,11 @@
         </p>
     </footer>
 
-    <script src='./js/title-comp.js'></script>
-    <script src='./js/server-stable-panel.js'></script>
+    <script src='./js/utility/title-comp.js'></script>
 
-    <script type="module" src="./js/scroll-observer.js"></script>
+    <script src='./js/utility/txt-bbangsnag-intro.js'></script>
+    <script src='./js/utility/server-stable-panel.js'></script>
+
+    <script type="module" src="./js/scroll-render/scroll-observer.js"></script>
 </body>
 </html>

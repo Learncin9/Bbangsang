@@ -7,6 +7,8 @@ class CustomTitle extends HTMLElement {
         } else {
             this.innerHTML = '<span class="red">Bb</span>ang<br/><span class="blue">S</span>ang';
         }
+
+        this.classList.add("title-txt");
     }
 }
 
