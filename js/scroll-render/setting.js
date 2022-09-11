@@ -24,7 +24,8 @@ export const OBSERVE_DATAs = [
                 });
             }, 200);
         }, 300)
-    })
+    }),
+    new ElementData(".discord-server-intro", "default-fade-in", null)
 ];
 
 

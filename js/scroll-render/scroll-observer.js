@@ -28,8 +28,10 @@ const observe_callback = (entries, observer) => {
     console.log(entries[0].target);
 
     //call callback
-    OBSERVE_DATAs[element_index].callback(entries[0].target);
-
+    if (OBSERVE_DATAs[element_index].callback !== null) {
+        OBSERVE_DATAs[element_index].callback(entries[0].target);
+    }
+    
     if (!RE_OBSERVABLE) observer.unobserve(entries[0].target);
 }
 
