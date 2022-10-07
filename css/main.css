@@ -166,7 +166,7 @@ main {
     color: rgb(210, 210, 210);
 }
 
-.discord-server-intro div input {
+.discord-server-intro div input[type="button"] {
     width: 30vw;
     min-width: 240px;
     height: 10vh;
@@ -184,5 +184,133 @@ main {
     border-color: #545ee4;
 
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 2vw;
+}
+
+@media (max-width: 767px) {
+    .discord-server-intro div input[type="button"] {
+        font-size: 5vw;
+    }
+}
+
+.low-price-intro {
+    display: block;
+    
+    background-image: url("./../img/blurr-less-money.jpg");
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    width: 100%;
+}
+
+.low-price-intro div h2 {
+    display: inline-block;
+
+    word-wrap: break-word;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: whitesmoke;
+
+    font-size: 7vw;
+    font-weight: bold;
+
+    margin-top: 10%;
+}
+
+.low-price-intro div p {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    text-align: center;
+    
+    font-size: x-large;
+
+    width: 80%;
+    font-weight: bold;
+
+    color:rgb(31, 30, 30);
+}
+
+@media (max-width: 767px) {
+    .low-price-intro div p {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+.register-intro {
+    display: block;
+    
+    /* background-image: url("./../img/blur_discord.jpg"); */
+    
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    width: 100%;
+}
+
+.register-intro div h2 {
+    display: inline-block;
+
+    word-wrap: break-word;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: black;
+
+    font-size: 7vw;
+    font-weight: bold;
+
+    margin-top: 10%;
+}
+
+
+.register-intro div input[type="button"] {
+    width: 30vw;
+    min-width: 240px;
+    height: 10vh;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 40px;
+
+    border-radius: 8px;
+
+    color: whitesmoke;
+    background-color: #545ee4;
+    border-color: #545ee4;
+
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+@media (max-width: 767px) {
+    .register-intro div input[type="button"] {
+        font-size: 5vw;
+
+        position: relative;
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, 80%);
+    }
+
+    .register-intro div h2 {
+        font-size: 10vw;
+    }
 }

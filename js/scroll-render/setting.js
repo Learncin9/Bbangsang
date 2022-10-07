@@ -25,7 +25,9 @@ export const OBSERVE_DATAs = [
             }, 200);
         }, 300)
     }),
-    new ElementData(".discord-server-intro", "default-fade-in", null)
+    new ElementData(".discord-server-intro", "default-fade-in", null),
+    new ElementData(".low-price-intro", "default-fade-in", null),
+    new ElementData(".register-intro", "default-fade-in", null),
 ];
 
 
