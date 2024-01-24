@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background-color: black;
+  color: #ebba26;
+  height: 10vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+}
+
+.header__logo {
+  height: 80%;
+}
+
+.header__logo--x2 {
+  height: 80%;
+  transform: scale(2);
+}
+
+.header__logo--x3 {
+  height: 80%;
+  transform: scale(3);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: bold;
+}
+
+.header__link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  font-size: 1.5rem;
+}
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__auth {
+  font-weight: bold;
+}
+
+.header__hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__auth {
+    display: none;
+  }
+  .header__hamburger {
+    display: inherit;
+  }
+  .header__hamburger-page--hide {
+    display: none;
+  }
+  .header__hamburger-page--show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header__hamburger-title {
+    font-size: 1.5rem;
+  }
+  .header__hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    margin: auto;
+  }
+  .header__hamburger-back {
+    background-color: inherit;
+    border: none;
+    color: #ebba26;
+    font-size: 2.5rem;
+  }
+  .header__hamburger-back:hover {
+    color: rgb(169, 179, 188);
+  }
+  .header__hamburger-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__hamburger-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .header__hamburger-link:hover {
+    text-decoration: underline;
+  }
+}
+a.btn--impact {
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+}
+
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+}
+
+a.btn--impactless {
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn--impact {
+  background-color: black;
+  color: #ebba26;
+  border: 2px #ebba26 solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition-duration: 100ms;
+}
+.btn--impact:hover {
+  background-color: #ebba26;
+  color: black;
+  border: 2px black solid;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: black;
+  border: 2px black solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition-duration: 100ms;
+}
+.btn:hover {
+  background-color: black;
+  color: #ffffff;
+  border: 2px #ffffff solid;
+}
+
+.btn--impactless {
+  background-color: #ffffff;
+  color: rgb(169, 179, 188);
+  border: 2px rgb(169, 179, 188) solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition-duration: 100ms;
+}
+.btn--impactless:hover {
+  background-color: rgb(169, 179, 188);
+  color: #ffffff;
+  border: 2px #ffffff solid;
+}
+
+.card {
+  border: none;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__hr {
+  color: rgb(169, 179, 188);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+.card__title:hover {
+  text-decoration: underline;
+}
+
+.card__descrption {
+  margin: 0;
+  padding: 0;
+}
+
+.card__topic {
+  color: rgb(169, 179, 188);
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 2fr 8fr;
+  }
+  .card__hr {
+    display: none;
+  }
+}
+.card--hor {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 2fr 8fr;
+}
+
+.card--hor .card__hr {
+  display: none;
+}
+
+.responsive {
+  width: 80vw;
+  margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .responsive {
+    width: 95vw;
+  }
+}
+.etcline {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  display: block;
+}
+
+.etcline__content {
+  margin: auto;
+  text-align: center;
+  z-index: 0;
+}
+.etcline__content::before {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(169, 179, 188);
+  content: "";
+  position: relative;
+  transform: translateY(20px);
+  z-index: -1;
+}
+
+.grid-1--gap-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+}
+.grid-1--gap-1--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-1--gap-2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.grid-1--gap-2--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-1--gap-3 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+.grid-1--gap-3--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-1--gap-4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+.grid-1--gap-4--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-1--gap-5 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+}
+.grid-1--gap-5--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-2--gap-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.grid-2--gap-1--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-2--gap-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.grid-2--gap-2--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-2--gap-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.grid-2--gap-3--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-2--gap-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.grid-2--gap-4--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-2--gap-5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.grid-2--gap-5--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-3--gap-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.grid-3--gap-1--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-3--gap-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.grid-3--gap-2--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-3--gap-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.grid-3--gap-3--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-3--gap-4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.grid-3--gap-4--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-3--gap-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.grid-3--gap-5--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-4--gap-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.grid-4--gap-1--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-4--gap-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.grid-4--gap-2--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-4--gap-3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.grid-4--gap-3--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-4--gap-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.grid-4--gap-4--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-4--gap-5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.grid-4--gap-5--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-5--gap-1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+.grid-5--gap-1--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-5--gap-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.grid-5--gap-2--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-5--gap-3 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+.grid-5--gap-3--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-5--gap-4 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.grid-5--gap-4--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+
+.grid-5--gap-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+.grid-5--gap-5--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+
+.ads-grid-1--gap-1 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 10px;
+}
+.ads-grid-1--gap-1 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+}
+.ads-grid-1--gap-1 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-1--gap-1 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.ads-grid-1--gap-2 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 15px;
+}
+.ads-grid-1--gap-2 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.ads-grid-1--gap-2 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-1--gap-2 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.ads-grid-1--gap-3 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 20px;
+}
+.ads-grid-1--gap-3 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+.ads-grid-1--gap-3 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-1--gap-3 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.ads-grid-1--gap-4 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 25px;
+}
+.ads-grid-1--gap-4 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+.ads-grid-1--gap-4 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-1--gap-4 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.ads-grid-1--gap-5 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 30px;
+}
+.ads-grid-1--gap-5 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+}
+.ads-grid-1--gap-5 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-1--gap-5 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+.ads-grid-2--gap-1 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 10px;
+}
+.ads-grid-2--gap-1 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.ads-grid-2--gap-1 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-2--gap-1 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.ads-grid-2--gap-2 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 15px;
+}
+.ads-grid-2--gap-2 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.ads-grid-2--gap-2 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-2--gap-2 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.ads-grid-2--gap-3 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 20px;
+}
+.ads-grid-2--gap-3 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.ads-grid-2--gap-3 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-2--gap-3 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.ads-grid-2--gap-4 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 25px;
+}
+.ads-grid-2--gap-4 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.ads-grid-2--gap-4 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-2--gap-4 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.ads-grid-2--gap-5 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 30px;
+}
+.ads-grid-2--gap-5 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.ads-grid-2--gap-5 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-2--gap-5 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+.ads-grid-3--gap-1 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 10px;
+}
+.ads-grid-3--gap-1 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.ads-grid-3--gap-1 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-3--gap-1 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.ads-grid-3--gap-2 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 15px;
+}
+.ads-grid-3--gap-2 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.ads-grid-3--gap-2 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-3--gap-2 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.ads-grid-3--gap-3 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 20px;
+}
+.ads-grid-3--gap-3 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.ads-grid-3--gap-3 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-3--gap-3 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.ads-grid-3--gap-4 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 25px;
+}
+.ads-grid-3--gap-4 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ads-grid-3--gap-4 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-3--gap-4 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.ads-grid-3--gap-5 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 30px;
+}
+.ads-grid-3--gap-5 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.ads-grid-3--gap-5 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-3--gap-5 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+.ads-grid-4--gap-1 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 10px;
+}
+.ads-grid-4--gap-1 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.ads-grid-4--gap-1 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-4--gap-1 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.ads-grid-4--gap-2 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 15px;
+}
+.ads-grid-4--gap-2 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.ads-grid-4--gap-2 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-4--gap-2 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.ads-grid-4--gap-3 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 20px;
+}
+.ads-grid-4--gap-3 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.ads-grid-4--gap-3 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-4--gap-3 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.ads-grid-4--gap-4 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 25px;
+}
+.ads-grid-4--gap-4 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.ads-grid-4--gap-4 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-4--gap-4 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.ads-grid-4--gap-5 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 30px;
+}
+.ads-grid-4--gap-5 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.ads-grid-4--gap-5 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-4--gap-5 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+.ads-grid-5--gap-1 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 10px;
+}
+.ads-grid-5--gap-1 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+.ads-grid-5--gap-1 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-5--gap-1 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.ads-grid-5--gap-2 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 15px;
+}
+.ads-grid-5--gap-2 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.ads-grid-5--gap-2 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-5--gap-2 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.ads-grid-5--gap-3 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 20px;
+}
+.ads-grid-5--gap-3 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+.ads-grid-5--gap-3 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-5--gap-3 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.ads-grid-5--gap-4 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 25px;
+}
+.ads-grid-5--gap-4 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.ads-grid-5--gap-4 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-5--gap-4 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.ads-grid-5--gap-5 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 30px;
+}
+.ads-grid-5--gap-5 .ads-grid__content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+.ads-grid-5--gap-5 .ads-grid__content--center {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  text-align: center;
+  place-self: center;
+}
+.ads-grid-5--gap-5 .ads-grid__ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid-1--gap-1 {
+    grid-template-columns: 1fr;
+  }
+  .grid-1--gap-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-1--gap-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-1--gap-4 {
+    grid-template-columns: 1fr;
+  }
+  .grid-1--gap-5 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2--gap-1 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2--gap-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2--gap-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2--gap-4 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2--gap-5 {
+    grid-template-columns: 1fr;
+  }
+  .grid-3--gap-1 {
+    grid-template-columns: 1fr;
+  }
+  .grid-3--gap-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-3--gap-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-3--gap-4 {
+    grid-template-columns: 1fr;
+  }
+  .grid-3--gap-5 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4--gap-1 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4--gap-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4--gap-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4--gap-4 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4--gap-5 {
+    grid-template-columns: 1fr;
+  }
+  .grid-5--gap-1 {
+    grid-template-columns: 1fr;
+  }
+  .grid-5--gap-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-5--gap-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-5--gap-4 {
+    grid-template-columns: 1fr;
+  }
+  .grid-5--gap-5 {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-1--gap-1 {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .ads-grid-1--gap-1 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-1--gap-1 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 5px;
+  }
+  .ads-grid-1--gap-2 {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+  .ads-grid-1--gap-2 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-1--gap-2 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .ads-grid-1--gap-3 {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .ads-grid-1--gap-3 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-1--gap-3 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+  .ads-grid-1--gap-4 {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+  .ads-grid-1--gap-4 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-1--gap-4 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .ads-grid-1--gap-5 {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .ads-grid-1--gap-5 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-1--gap-5 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+  .ads-grid-2--gap-1 {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .ads-grid-2--gap-1 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-2--gap-1 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 5px;
+  }
+  .ads-grid-2--gap-2 {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+  .ads-grid-2--gap-2 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-2--gap-2 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .ads-grid-2--gap-3 {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .ads-grid-2--gap-3 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-2--gap-3 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+  .ads-grid-2--gap-4 {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+  .ads-grid-2--gap-4 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-2--gap-4 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .ads-grid-2--gap-5 {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .ads-grid-2--gap-5 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-2--gap-5 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+  .ads-grid-3--gap-1 {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .ads-grid-3--gap-1 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-3--gap-1 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 5px;
+  }
+  .ads-grid-3--gap-2 {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+  .ads-grid-3--gap-2 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-3--gap-2 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .ads-grid-3--gap-3 {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .ads-grid-3--gap-3 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-3--gap-3 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+  .ads-grid-3--gap-4 {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+  .ads-grid-3--gap-4 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-3--gap-4 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .ads-grid-3--gap-5 {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .ads-grid-3--gap-5 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-3--gap-5 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+  .ads-grid-4--gap-1 {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .ads-grid-4--gap-1 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-4--gap-1 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 5px;
+  }
+  .ads-grid-4--gap-2 {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+  .ads-grid-4--gap-2 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-4--gap-2 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .ads-grid-4--gap-3 {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .ads-grid-4--gap-3 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-4--gap-3 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+  .ads-grid-4--gap-4 {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+  .ads-grid-4--gap-4 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-4--gap-4 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .ads-grid-4--gap-5 {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .ads-grid-4--gap-5 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-4--gap-5 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+  .ads-grid-5--gap-1 {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .ads-grid-5--gap-1 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-5--gap-1 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 5px;
+  }
+  .ads-grid-5--gap-2 {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+  .ads-grid-5--gap-2 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-5--gap-2 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .ads-grid-5--gap-3 {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .ads-grid-5--gap-3 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-5--gap-3 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+  .ads-grid-5--gap-4 {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+  .ads-grid-5--gap-4 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-5--gap-4 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .ads-grid-5--gap-5 {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .ads-grid-5--gap-5 .ads-grid__content {
+    grid-template-columns: 1fr;
+  }
+  .ads-grid-5--gap-5 .ads-grid__ads {
+    align-items: start;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+}
+.ad {
+  border-top: 5px #ebba26 solid;
+  border-left: 1px rgb(169, 179, 188) solid;
+  border-right: 1px rgb(169, 179, 188) solid;
+  border-bottom: 1px rgb(169, 179, 188) solid;
+  padding: 10px;
+  width: 100%;
+}
+
+.ad__nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ad__topic {
+  color: rgb(169, 179, 188);
+  font-weight: bold;
+}
+
+.ad__link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+.ad__link:hover {
+  text-decoration: underline;
+}
+
+.ad__content * {
+  width: 100%;
+}
+
+.footer {
+  padding: 4rem;
+  background-color: black;
+  color: #ebba26;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.footer__logo {
+  width: 200px;
+}
+
+.footer__category {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer__element {
+  padding: 10px;
+  text-align: center;
+}
+
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__line {
+  color: inherit;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer__meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__sns {
+  display: flex;
+  column-gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.mt-1 {
+  margin-top: 7px;
+}
+
+.mb-1 {
+  margin-bottom: 7px;
+}
+
+.ml-1 {
+  margin-left: 7px;
+}
+
+.mr-1 {
+  margin-right: 7px;
+}
+
+.pt-1 {
+  padding: 7px;
+}
+
+.pb-1 {
+  padding: 7px;
+}
+
+.pl-1 {
+  padding: 7px;
+}
+
+.pr-1 {
+  padding: 7px;
+}
+
+.mt-2 {
+  margin-top: 14px;
+}
+
+.mb-2 {
+  margin-bottom: 14px;
+}
+
+.ml-2 {
+  margin-left: 14px;
+}
+
+.mr-2 {
+  margin-right: 14px;
+}
+
+.pt-2 {
+  padding: 14px;
+}
+
+.pb-2 {
+  padding: 14px;
+}
+
+.pl-2 {
+  padding: 14px;
+}
+
+.pr-2 {
+  padding: 14px;
+}
+
+.mt-3 {
+  margin-top: 21px;
+}
+
+.mb-3 {
+  margin-bottom: 21px;
+}
+
+.ml-3 {
+  margin-left: 21px;
+}
+
+.mr-3 {
+  margin-right: 21px;
+}
+
+.pt-3 {
+  padding: 21px;
+}
+
+.pb-3 {
+  padding: 21px;
+}
+
+.pl-3 {
+  padding: 21px;
+}
+
+.pr-3 {
+  padding: 21px;
+}
+
+.mt-4 {
+  margin-top: 28px;
+}
+
+.mb-4 {
+  margin-bottom: 28px;
+}
+
+.ml-4 {
+  margin-left: 28px;
+}
+
+.mr-4 {
+  margin-right: 28px;
+}
+
+.pt-4 {
+  padding: 28px;
+}
+
+.pb-4 {
+  padding: 28px;
+}
+
+.pl-4 {
+  padding: 28px;
+}
+
+.pr-4 {
+  padding: 28px;
+}
+
+.mt-5 {
+  margin-top: 35px;
+}
+
+.mb-5 {
+  margin-bottom: 35px;
+}
+
+.ml-5 {
+  margin-left: 35px;
+}
+
+.mr-5 {
+  margin-right: 35px;
+}
+
+.pt-5 {
+  padding: 35px;
+}
+
+.pb-5 {
+  padding: 35px;
+}
+
+.pl-5 {
+  padding: 35px;
+}
+
+.pr-5 {
+  padding: 35px;
+}
+
+.color-primary {
+  color: #ebba26;
+}
+
+.color-text {
+  color: #ebba26;
+}
+
+.color-bg {
+  color: #ffffff;
+}
+
+.bgcolor-primary {
+  background-color: #ebba26;
+}
+
+.bgcolor-text {
+  background-color: #ebba26;
+}
+
+.bgcolor-bg {
+  background-color: #ffffff;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.form {
+  background-color: black;
+  padding: 20px;
+}
+
+.form__title {
+  color: #ebba26;
+}
+
+.form__select {
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.form__text {
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.form__textarea {
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.form__radio {
+  text-align: center;
+}
+.form__radio .form__radiobtn {
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  background-color: #ffffff;
+  accent-color: #ebba26;
+}
+.form__radio .form__radiolabel {
+  color: #ffffff;
+}
+
+.form__submit {
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition-duration: 100ms;
+  background-color: black;
+  color: #ebba26;
+  border: 2px #ebba26 solid;
+}
+.form__submit:hover {
+  background-color: #ebba26;
+  color: black;
+  border: 2px black solid;
+}
+
+/*# sourceMappingURL=min.css.map */
+
+    </style>
+    <script src="../scripts/header.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo--x2" src="https://cdn.jsdelivr.net/gh/pengu1m/cdn@main/static/sundayv4/logo.png" alt="" />
+        <nav class="header__nav">
+            <a class="header__link" href="#">News</a>
+            <a class="header__link" href="#">Video</a>
+            <a class="header__link" href="#">Match</a>
+            <a class="header__link" href="#">Members</a>
+            <a class="header__link" href="#">Shop</a>
+            <a class="header__link" href="#">Join</a>
+        </nav>
+        
+        <div class="header__auth">
+            <button class="btn--impact">Login</button>
+            <button class="btn--impact">SignIn</button>
+        </div>
+
+        <div class="header__hamburger">
+            <button class="header__hamburger-btn btn--impact">≡</button>
+
+            <div class="header__hamburger-page--hide">
+                <div class="header__hamburger-menu">
+                    <h1 class="header__hamburger-title">SundayFC.com</h1>
+                    <button class="header__hamburger-back">×</button>
+                </div>
+
+                <nav class="header__hamburger-nav">
+                    <a class="header__hamburger-link" href="#">News</a>
+                    <a class="header__hamburger-link" href="#">Video</a>
+                    <a class="header__hamburger-link" href="#">Fixtures</a>
+                    <a class="header__hamburger-link" href="#">Shop</a>
+                    <a class="header__hamburger-link" href="#">Join</a>
+                    <hr />
+                    <a class="header__hamburger-link" href="#">Login</a>
+                    <a class="header__hamburger-link" href="#">Sigin</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="responsive" style="margin-top: 70px;">
+    
+        <div class="ads-grid-1--gap-4">
+            <div class="ads-grid__content">
+                <div class="card--hor" >
+                    <!-- <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt=""> -->
+
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card--hor" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ads-grid__ads">
+                <div class="ad">
+                    <div class="ad__nav">
+                        <span class="ad__topic">새 상품 출시</span>
+                        <a class="ad__link" href="#">구매→</a>
+                    </div>
+
+                    <div class="ad__content">
+                        <img src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="ad">
+                    <div class="ad__nav">
+                        <span class="ad__topic">국가대표 선출</span>
+                        <a class="ad__link" href="#">자세히→</a>
+                    </div>
+
+                    <div class="ad__content">
+                        <h2>asdasdad
+                            <h1>asdasdds</h1>
+                            <h1>asdasdds</h1>
+                            <h1>asdasdds</h1>
+                            <h1>asdasdds</h1>
+
+                            <div class="grid-2--gap-5--center">
+                                <span>as</span>
+                                <span>as</span>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="etcline">
+            <div class="etcline__content">
+                <a class="btn--impactless">더보기</a>
+            </div>
+        </div>
+
+        <div class="ads-grid-4--gap-4">
+            <div class="ads-grid__content">
+                <div class="card" >
+                    <!-- <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt=""> -->
+
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card__img" src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+        
+                    <hr class="card__hr" />
+        
+                    <div class="card__content">
+                        <a href="#" class="card__title">타이틀</a>
+                        <p class="card__descrption">이것은 설명 텍스트 입니다. (생략가능)</p>
+            
+                        <span class="card__topic">VIDEO</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ads-grid__ads">
+                <div class="ad">
+                    <div class="ad__nav">
+                        <span class="ad__topic">새 상품 출시</span>
+                        <a class="ad__link" href="#">구매→</a>
+                    </div>
+
+                    <div class="ad__content">
+                        <img src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="ad">
+                    <div class="ad__nav">
+                        <span class="ad__topic">국가대표 선출</span>
+                        <a class="ad__link" href="#">자세히→</a>
+                    </div>
+
+                    <div class="ad__content">
+                        <h2>여기에 들어올
+                            <h1>요소는</h1>
+                            <h1>마음대로</h1>
+                            <h1>정할수</h1>
+                            <h1>있음</h1>
+
+                            <div class="grid-2--gap-5--center">
+                                <button class="btn--impactless">버튼도</button>
+                                <button class="btn--impactless">가능</button>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <form class="form mt-3 mb-3" action="http://localhost:5500" method="get" name="profile">
+                <h3 class="form__title">경기 결과 검색하기</h3>
+                
+                <div class="grid-4--gap-2 mb-3">
+                    <input class="form__text" type="text" name="id" placeholder="경기 ID 입력"> <!-- 입력란 -->
+                    
+                    <select name="time" class="form__select"> <!-- 드롭다운 메뉴 -->
+                        <option value="all">전체 기간</option>
+                        <option value="2020">2020~</option>
+                        <option value="2010_2019">2010~2019</option>
+                        <option value="2000_2009">2000_2009</option>
+                    </select>
+    
+                    <select name="type" class="form__select"> <!-- 드롭다운 메뉴 -->
+                        <option value="all">모든 종류</option>
+                        <option value="pae_sauun">패싸움</option>
+                        <option value="soccer">축구</option>
+                        <option value="nun_saunn">눈싸움</option>
+                    </select>
+    
+                    <select name="result" class="form__select"> <!-- 드롭다운 메뉴 -->
+                        <option value="all">모든 종류</option>
+                        <option value="win">승리</option>
+                        <option value="fail">패배</option>
+                        <option value="draw">무승부</option>
+                    </select>
+
+                    <textarea name="search_by_id" placeholder="댓글로 검색 (생략 가능)"></textarea>
+
+                    <div class="form__radio">
+                        <input class="form__radiobtn" type="radio" name="kimuuhun" id="kimuuhun_radio" value="with" />
+                        <label class="form__radiolabel" for="kimuuhun_radio">김의현 포함</label>
+                    </div>
+
+                </div>
+    
+                <input type="submit" value="검색하기 (아직 누르면 안됨)" class="form__submit">
+            </form>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="footer__content">
+            <img class="footer__logo" src="https://cdn.jsdelivr.net/gh/pengu1m/cdn@main/static/sundayv4/logo.png" alt="">
+            
+            <table class="footer__nav">
+                <tr>
+                    <th class="footer__category">카테고리1</th>
+                    <th class="footer__category">카테고리2</th>
+                </tr>
+                <tr>
+                    <td class="footer__element"><a href="#" class="footer__link">링크 1</a></td>
+                    <td class="footer__element"><a href="#" class="footer__link">링크 2</a></td>
+                </tr>
+                <tr>
+                    <td class="footer__element"><a href="#" class="footer__link">링크 3</a></td>
+                    <td class="footer__element"><a href="#" class="footer__link">링크 4</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <hr class="footer__line"/>
+
+        <div class="footer__meta">
+            <div class="footer__sns">
+                <a href="#" class="footer__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="footer__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
+                        <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="footer__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                        <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <span class="footer__license">ⓒ pengu1m (github)</span>
+        </div>
+    </footer>
+</body>
+</html>
